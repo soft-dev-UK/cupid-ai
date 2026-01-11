@@ -11,6 +11,9 @@ interface ContextData {
     topic: string;
 }
 
+const GOAL_PRESETS_JA = ["雑談を続ける", "デートに誘う", "電話する", "告白の準備"];
+const GOAL_PRESETS_EN = ["Keep Chatting", "Ask on Date", "Make a Call", "Prepare Confession"];
+
 interface ContextPanelProps {
     initialGoal: string;
     onUpdate: (data: ContextData) => void;
@@ -68,7 +71,7 @@ export default function ContextPanel({ initialGoal, onUpdate, className = "", la
 
                                 {/* Preset Buttons */}
                                 <div className="flex flex-wrap gap-2 mb-3">
-                                    {["雑談を続ける", "デートに誘う", "電話する", "告白の準備"].map((preset) => (
+                                    {(lang === "ja" ? GOAL_PRESETS_JA : GOAL_PRESETS_EN).map((preset) => (
                                         <button
                                             key={preset}
                                             onClick={() => handleChange("goal", preset)}
@@ -77,14 +80,12 @@ export default function ContextPanel({ initialGoal, onUpdate, className = "", la
                                                 : "bg-white text-gray-500 border-gray-200 hover:bg-gray-50"
                                                 }`}
                                         >
-                                            {/* Note: This simplistic approach might show JP presets even in EN mode if initialGoal is JP. 
-                                                Ideally mapping presets is better, but for now we follow simple logic */}
                                             {preset}
                                         </button>
                                     ))}
                                     <button
                                         onClick={() => handleChange("goal", "")}
-                                        className={`px-3 py-1.5 rounded-full text-xs font-medium transition-colors border ${!["雑談を続ける", "デートに誘う", "電話する", "告白の準備"].includes(data.goal) && data.goal !== ""
+                                        className={`px-3 py-1.5 rounded-full text-xs font-medium transition-colors border ${!(lang === "ja" ? GOAL_PRESETS_JA : GOAL_PRESETS_EN).includes(data.goal) && data.goal !== ""
                                             ? "bg-rose-100 text-rose-600 border-rose-200"
                                             : "bg-white text-gray-500 border-gray-200 hover:bg-gray-50"
                                             }`}

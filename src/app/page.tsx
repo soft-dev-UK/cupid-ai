@@ -141,29 +141,31 @@ export default function Home() {
 
     return (
         <main className="min-h-screen bg-gradient-to-br from-[#FFC3D0] via-[#E8DFF5] to-[#AEC6CF] flex flex-col items-center py-8 px-4 font-sans text-gray-700">
-            {step !== "landing" && (
-                <header className="mb-6 text-center w-full max-w-4xl relative">
-                    <div className="absolute top-0 right-0">
-                        <button
-                            onClick={toggleLang}
-                            className="flex items-center gap-1.5 px-3 py-1.5 bg-white/40 backdrop-blur-md rounded-full text-xs font-bold text-gray-600 hover:bg-white/60 transition-colors shadow-sm"
-                        >
-                            <Globe className="w-3.5 h-3.5" />
-                            {lang === "ja" ? "JP" : "EN"}
-                        </button>
-                    </div>
-
+            <header className="mb-6 text-center w-full max-w-4xl relative z-50">
+                <div className="absolute top-0 right-0">
                     <button
-                        onClick={() => setStep("landing")}
-                        className="text-2xl md:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-purple-600 tracking-tighter hover:opacity-80 transition-opacity"
+                        onClick={toggleLang}
+                        className="flex items-center gap-1.5 px-3 py-1.5 bg-white/40 backdrop-blur-md rounded-full text-xs font-bold text-gray-600 hover:bg-white/60 transition-colors shadow-sm"
                     >
-                        {t.title}
+                        <Globe className="w-3.5 h-3.5" />
+                        {lang === "ja" ? "JP" : "EN"}
                     </button>
-                    <p className="text-xs md:text-sm text-gray-500 font-medium mt-1">
-                        {t.subtitle}
-                    </p>
-                </header>
-            )}
+                </div>
+
+                {step !== "landing" && (
+                    <div className="pt-2">
+                        <button
+                            onClick={() => setStep("landing")}
+                            className="text-2xl md:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-purple-600 tracking-tighter hover:opacity-80 transition-opacity"
+                        >
+                            {t.title}
+                        </button>
+                        <p className="text-xs md:text-sm text-gray-500 font-medium mt-1">
+                            {t.subtitle}
+                        </p>
+                    </div>
+                )}
+            </header>
 
             <AnimatePresence>
                 {showLimitModal && (
