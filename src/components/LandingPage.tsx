@@ -62,12 +62,24 @@ export default function LandingPage({ onStart, lang }: LandingPageProps) {
                     className="flex justify-center mb-4"
                 >
                     <div className="bg-white/40 p-4 rounded-full backdrop-blur-md border border-white/50 shadow-inner">
-                        <div className="bg-gradient-to-tr from-rose-300 to-blue-300 p-3 rounded-full shadow-lg relative">
-                            <Heart className="w-12 h-12 text-white fill-white/90 relative z-10" />
-                            <svg viewBox="0 0 24 24" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 text-yellow-300 z-20 pointer-events-none drop-shadow-sm filter drop-shadow-lg" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                                <path d="M4 20 L20 4" />
-                                <path d="M20 4 L14 4 M20 4 L20 10" />
-                                <path d="M4 20 L10 20 M4 20 L4 14" />
+                        <div className="bg-gradient-to-tr from-rose-400 to-purple-500 p-4 rounded-full shadow-xl relative group overflow-hidden">
+                            <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                            {/* Custom Cupid Heart SVG */}
+                            <svg width="56" height="56" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="drop-shadow-sm">
+                                {/* Arrow Tail */}
+                                <path d="M20 80 L35 65" stroke="white" strokeWidth="4" strokeLinecap="round" />
+                                <path d="M18 82 L26 84 M18 82 L16 74" stroke="white" strokeWidth="4" strokeLinecap="round" />
+
+                                {/* Heart */}
+                                <path d="M50 85C50 85 85 65 85 40C85 25 73 15 60 15C52 15 45 20 45 20C45 20 38 15 30 15C17 15 5 25 5 40C5 65 40 85 50 85Z"
+                                    fill="white" fillOpacity="0.9" stroke="white" strokeWidth="2" />
+
+                                {/* Arrow Head (coming out top right) */}
+                                <path d="M65 35 L85 15" stroke="#FFEBA7" strokeWidth="5" strokeLinecap="round" />
+                                <path d="M85 15 L74 15 M85 15 L85 26" stroke="#FFEBA7" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" />
+
+                                {/* Sparkles */}
+                                <path d="M85 35 L87 37 M87 33 L85 35" stroke="#FFEBA7" strokeWidth="2" className="animate-pulse" />
                             </svg>
                         </div>
                     </div>
