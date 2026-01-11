@@ -67,19 +67,19 @@ export default function LandingPage({ onStart, lang }: LandingPageProps) {
                             {/* Custom Cupid Heart SVG */}
                             <svg width="56" height="56" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="drop-shadow-sm">
                                 {/* Arrow Tail */}
-                                <path d="M20 80 L35 65" stroke="white" strokeWidth="4" strokeLinecap="round" />
-                                <path d="M18 82 L26 84 M18 82 L16 74" stroke="white" strokeWidth="4" strokeLinecap="round" />
+                                <path d="M20 80 L35 65" stroke="#60A5FA" strokeWidth="6" strokeLinecap="round" />
+                                <path d="M18 82 L26 84 M18 82 L16 74" stroke="#60A5FA" strokeWidth="6" strokeLinecap="round" />
 
                                 {/* Heart */}
                                 <path d="M50 85C50 85 85 65 85 40C85 25 73 15 60 15C52 15 45 20 45 20C45 20 38 15 30 15C17 15 5 25 5 40C5 65 40 85 50 85Z"
-                                    fill="white" fillOpacity="0.9" stroke="white" strokeWidth="2" />
+                                    fill="white" fillOpacity="0.95" stroke="white" strokeWidth="2" />
 
                                 {/* Arrow Head (coming out top right) */}
-                                <path d="M65 35 L85 15" stroke="#FFEBA7" strokeWidth="5" strokeLinecap="round" />
-                                <path d="M85 15 L74 15 M85 15 L85 26" stroke="#FFEBA7" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" />
+                                <path d="M65 35 L85 15" stroke="#60A5FA" strokeWidth="8" strokeLinecap="round" />
+                                <path d="M85 15 L72 15 M85 15 L85 28" stroke="#60A5FA" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round" />
 
                                 {/* Sparkles */}
-                                <path d="M85 35 L87 37 M87 33 L85 35" stroke="#FFEBA7" strokeWidth="2" className="animate-pulse" />
+                                <path d="M85 35 L87 37 M87 33 L85 35" stroke="white" strokeWidth="3" className="animate-pulse" />
                             </svg>
                         </div>
                     </div>
