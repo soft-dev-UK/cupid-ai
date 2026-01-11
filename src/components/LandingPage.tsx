@@ -62,8 +62,13 @@ export default function LandingPage({ onStart, lang }: LandingPageProps) {
                     className="flex justify-center mb-4"
                 >
                     <div className="bg-white/40 p-4 rounded-full backdrop-blur-md border border-white/50 shadow-inner">
-                        <div className="bg-gradient-to-tr from-rose-300 to-blue-300 p-3 rounded-full shadow-lg">
-                            <Heart className="w-12 h-12 text-white fill-white/90" />
+                        <div className="bg-gradient-to-tr from-rose-300 to-blue-300 p-3 rounded-full shadow-lg relative">
+                            <Heart className="w-12 h-12 text-white fill-white/90 relative z-10" />
+                            <svg viewBox="0 0 24 24" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 text-yellow-300 z-20 pointer-events-none drop-shadow-sm filter drop-shadow-lg" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                                <path d="M4 20 L20 4" />
+                                <path d="M20 4 L14 4 M20 4 L20 10" />
+                                <path d="M4 20 L10 20 M4 20 L4 14" />
+                            </svg>
                         </div>
                     </div>
                 </motion.div>
