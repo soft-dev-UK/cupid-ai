@@ -256,7 +256,7 @@ export default function Home() {
                         className="w-full"
                     >
                         {/* onReset now goes back to 'input', preserving state */}
-                        <AnalysisResult data={resultData} onReset={() => setStep("input")} />
+                        <AnalysisResult data={resultData} onReset={() => setStep("input")} lang={lang} />
                     </motion.div>
                 )}
             </AnimatePresence>
