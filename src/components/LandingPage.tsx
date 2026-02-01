@@ -153,6 +153,16 @@ export default function LandingPage({ onStart, lang }: LandingPageProps) {
                 </div>
             </motion.div>
 
+
+            {/* Footer */}
+            <footer className="w-full text-center py-6 mt-8">
+                <div className="flex justify-center gap-6 text-xs text-gray-500 font-medium">
+                    <a href="/terms" className="hover:text-gray-800 transition-colors">利用規約 (Terms)</a>
+                    <a href="/privacy" className="hover:text-gray-800 transition-colors">プライバシーポリシー (Privacy)</a>
+                </div>
+                <p className="mt-2 text-[10px] text-gray-400">© 2026 Cupid Agent</p>
+            </footer>
+
         </div>
     );
 }
